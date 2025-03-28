@@ -11,12 +11,13 @@ import (
 )
 
 type ChatMessageStreamResponse struct {
-	Event          string `json:"event"`
-	TaskID         string `json:"task_id"`
-	ID             string `json:"id"`
-	Answer         string `json:"answer"`
-	CreatedAt      int64  `json:"created_at"`
-	ConversationID string `json:"conversation_id"`
+	Event          string          `json:"event"`
+	TaskID         string          `json:"task_id"`
+	ID             string          `json:"id"`
+	Answer         string          `json:"answer"`
+	CreatedAt      int64           `json:"created_at"`
+	ConversationID string          `json:"conversation_id"`
+	Data           json.RawMessage `json:"data"`
 }
 
 type ChatMessageStreamChannelResponse struct {
